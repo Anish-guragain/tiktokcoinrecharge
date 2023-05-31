@@ -158,7 +158,7 @@
       <li class="p-1"><img class="h-5 w-5" src="https://lf16-co.g-p-static.com/obj/pipo-sg/sky/card_american_express_v1_429e0f.svg" ></li>
       <li class="p-1"><img class="h-5 w-5" src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/paypal-light-border_4305a4.svg" ></li>
     </ul>
-    <p id="result"></p>
+    <p id="result" ></p>
 
     <!-- purchase -->
     <button id="openButton" class=" mt-5 font-bold text-white bg-[#fe2c55] hover:bg-[#ef2950] w-52 h-12 rounded-md">Recharge</button>
@@ -245,32 +245,40 @@ const result = document.getElementById('result');
 
 card1.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
-  result.textContent = `Total Price: ${value}`;
+    result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+
+  
 });
 
 card2.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
-  result.textContent = `Total Price: ${value}`;
+    result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+
 });
 card3.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
-  result.textContent = `Total Price: ${value}`;
+    result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+
 });
 card4.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
-  result.textContent = `Total Price: ${value}`;
+    result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+
 });
 card5.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
-  result.textContent = `Total Price: ${value}`;
+    result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+
 });
 card6.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
-  result.textContent = `Total Price: ${value}`;
+    result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+
 });
 card7.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
-  result.textContent = `Total Price: ${value}`;
+    result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+
 });
 
 
@@ -323,11 +331,12 @@ card8.addEventListener('input', function() {
   // Get the value entered in the input field
   var value = parseFloat(inputField.value);
 
-  // Calculate the total price by multiplying the value with the factor
+  // Calculate the Total by multiplying the value with the factor
   var totalPrice = value * 0.00857142857;
 
-  // Display the total price in the result element
-  result.textContent = `Total Price: ${totalPrice.toFixed(2)}`;
+  // Display the Total in the result element
+  result.textContent = `Total:€  ${totalPrice.toFixed(2)}`;
+  supportnumb.textContent=`€ ${totalPrice.toFixed(2)}`
 });
 
 
