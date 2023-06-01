@@ -133,7 +133,7 @@
             <path d="M33 19C30.2041 19 27.9375 16.7614 27.9375 14H24.5625V27.6111C24.5625 29.2986 23.1774 30.6667 21.4688 30.6667C19.7601 30.6667 18.375 29.2986 18.375 27.6111C18.375 25.9236 19.7601 24.5556 21.4688 24.5556C21.722 24.5556 21.9659 24.5853 22.1981 24.6406C22.2365 24.6497 22.2747 24.6596 22.3125 24.6701V21.2763C22.0358 21.2406 21.7541 21.2222 21.4688 21.2222C17.8962 21.2222 15 24.0826 15 27.6111C15 31.1396 17.8962 34 21.4688 34C25.0413 34 27.9375 31.1396 27.9375 27.6111V20.6673C29.3477 21.7134 31.1005 22.3333 33 22.3333V19Z" fill="#FEF5CD"></path>
           </svg>
           <p class="pl-2 text-xl font-bold">Custom</p>
-          <input class="inp hidden border-b-2 border-solid border-black appearance-none w-3/4 text-gray-700 mr-3 py-1 px-2 focus:outline-none text-center text-xl pl-2" type="text" aria-label="Full name">
+          <input class="number-input inp hidden border-b-2 border-solid border-black appearance-none w-3/4 text-gray-700 mr-3 py-1 px-2 focus:outline-none text-center text-xl pl-2" type="text" aria-label="Full name">
 
 
         </div>
@@ -339,6 +339,23 @@ card8.addEventListener('input', function() {
   supportnumb.textContent=`€ ${totalPrice.toFixed(2)}`
 });
 
+
+var numberInputs = document.getElementsByClassName('number-input');
+  
+  for (var i = 0; i < numberInputs.length; i++) {
+    numberInputs[i].addEventListener('keyup', function() {
+      var value = this.value;
+      
+      // Remove existing commas from the input value
+      var sanitizedValue = value.replace(/,/g, '');
+      
+      // Format the number with commas
+      var formattedValue = sanitizedValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      
+      // Set the formatted value back to the input field
+      this.value = formattedValue;
+    });
+  }
 
 
 
