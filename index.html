@@ -340,22 +340,7 @@ card8.addEventListener('input', function() {
 });
 
 
-var numberInputs = document.getElementsByClassName('number-input');
-  
-  for (var i = 0; i < numberInputs.length; i++) {
-    numberInputs[i].addEventListener('keyup', function() {
-      var value = this.value;
-      
-      // Remove existing commas from the input value
-      var sanitizedValue = value.replace(/,/g, '');
-      
-      // Format the number with commas
-      var formattedValue = sanitizedValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-      
-      // Set the formatted value back to the input field
-      this.value = formattedValue;
-    });
-  }
+
 
 
 
