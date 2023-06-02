@@ -192,14 +192,16 @@
         
         <div class=" flex flex-col justify-center items-center">
           <ul class=" mt-4">
-            <p class="mr-2 text-2xl">Payment method</p>
+           
+            <h1 class="text-xl my-2 font-bold">Payment Completed</h1>
             <div class="flex justify-center">
             <li class="p-1"><img class="h-14 w-14" src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/paypal-light-border_4305a4.svg" ></li>
           </div>
           </ul>
-        <h1 class="text-xl my-2 font-bold">Payment Completed</h1>
+          <p class="mr-2 text-2xl">Payment method</p>
+
       
-      <p class="my-4 rounded-sm  font-bold">The coin has been recharged to given username account.</p>
+      <p id="worth" class=" my-4 rounded-sm text-center  font-bold"></p>
       <p class="my-4 rounded-sm text-blue-600 font-bold">Coin will be added shortly.</p>
 
     </div>
@@ -271,6 +273,8 @@ const result = document.getElementById('result');
 card1.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
     result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+    const secondvalue=this.querySelector('.car').textContent;
+  worth.innerHTML=`The coin worth ${secondvalue} has been recharged to given username account.`
 
   
 });
@@ -278,31 +282,44 @@ card1.addEventListener('click', function() {
 card2.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
     result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+    const secondvalue=this.querySelector('.car').textContent;
+  worth.innerHTML=`The coin worth ${secondvalue} has been recharged to given username account.`
 
 });
 card3.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
     result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+    const secondvalue=this.querySelector('.car').textContent;
+  worth.innerHTML=`The coin worth ${secondvalue} has been recharged to given username account.`
 
 });
 card4.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
     result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+    const secondvalue=this.querySelector('.car').textContent;
+  worth.innerHTML=`The coin worth ${secondvalue} has been recharged to given username account.`
 
 });
 card5.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
     result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+    const secondvalue=this.querySelector('.car').textContent;
+  worth.innerHTML=`The coin worth ${secondvalue} has been recharged to given username account.`
 
 });
 card6.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
     result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+    const secondvalue=this.querySelector('.car').textContent;
+  worth.innerHTML=`The coin worth ${secondvalue} has been recharged to given username account.`
 
 });
 card7.addEventListener('click', function() {
   const value = this.querySelector('.car').textContent;
     result.innerHTML = `Total: <span style="font-weight: bold;">${value}</span>`;
+  const secondvalue=this.querySelector('.car').textContent;
+  worth.innerHTML=`The coin worth ${secondvalue} has been recharged to given username account.`
+
 
 });
 
@@ -360,7 +377,9 @@ card8.addEventListener('input', function() {
 
   // Display the Total in the result element
   result.textContent = `Total:$  ${totalPrice.toFixed(2)}`;
-  supportnumb.textContent=`$ ${totalPrice.toFixed(2)}`
+  worth.textContent= `The coin worth $  ${totalPrice.toFixed(2)} has been recharged to given username account.`;
+  
+  
 });
 
 
